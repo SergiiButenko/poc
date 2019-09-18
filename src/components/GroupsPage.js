@@ -1,9 +1,13 @@
 import React from 'react';
+import Groups from './Groups/index';
+import ToolbarAppWeb from './ToolbarApp';
 
 
 const GroupsPage = () => (
     <div>
-        {'test'}
+        <ToolbarAppWeb>
+            <Groups/>
+        </ToolbarAppWeb>
     </div>
 );
 

@@ -1,8 +1,8 @@
 import config from 'config';
-import {smartSystemApi} from './provider';
+import {pocApi} from './provider';
 
 const {endpoints: {base_url}} = config;
 
-smartSystemApi.setGlobalConfig({base_url});
+pocApi.setGlobalConfig({base_url});
 
-window.ssa = smartSystemApi;
+window.poc = pocApi;

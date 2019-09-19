@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 
 import entity from './entity';
-import groups from './groups';
+import devices from './devices';
 
 const createFilteredReducer = (reducerFunction, reducerPredicate) =>
     (state, action) => {
@@ -14,5 +14,5 @@ const filter = (key) => action => action.type.startsWith(key);
 
 export default combineReducers({
     entity:          createFilteredReducer(entity,         filter('ENTITY')),
-    groups:          createFilteredReducer(groups,         filter('GROUPS')),
+    devices:          createFilteredReducer(devices,       filter('DEVICES')),
 });

@@ -1,14 +1,14 @@
 import React from 'react';
-import Groups from './Groups/index';
+import Devices from './Devices/index';
 import ToolbarAppWeb from './ToolbarApp';
 
 
-const GroupsPage = () => (
+const DevicesPage = () => (
     <div>
         <ToolbarAppWeb>
-            <Groups/>
+            <Devices/>
         </ToolbarAppWeb>
     </div>
 );
 
-export default GroupsPage;
+export default DevicesPage;

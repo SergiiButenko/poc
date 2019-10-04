@@ -4,8 +4,8 @@ module.exports = {
     },
 
     endpoint_section: {
-        base_url: 'http://ec2-18-191-184-229.us-east-2.compute.amazonaws.com/',
+        base_url: 'http://52.167.54.40:8005/',
         amazon: {},
-        ws_uri: 'ws://ec2-18-191-184-229.us-east-2.compute.amazonaws.com/',
+        ws_uri: 'ws://52.167.54.40:8005/',
     }
 };

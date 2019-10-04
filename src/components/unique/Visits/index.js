@@ -100,8 +100,8 @@ export default class Visits extends React.Component {
                                 <TableHead>
                                 <TableRow>
                                     <TableCell>Smart Printer</TableCell>
-                                    <TableCell align="right">Time</TableCell>
-                                    <TableCell align="right">Path</TableCell>
+                                    <TableCell>Time</TableCell>
+                                    <TableCell>Path</TableCell>
                                 </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -110,8 +110,8 @@ export default class Visits extends React.Component {
                                     <TableCell component="th" scope="row">
                                         {1}
                                     </TableCell>
-                                    <TableCell align="right">{'' + row.timestamp}</TableCell>
-                                    <TableCell align="right">{row.path}</TableCell>
+                                    <TableCell>{'' + row.timestamp}</TableCell>
+                                    <TableCell>{row.path}</TableCell>
                                     </TableRow>
                                 ))}
                                 </TableBody>

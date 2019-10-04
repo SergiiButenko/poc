@@ -3,5 +3,5 @@ export const apiUri = {
     SENSORS: 'api/touchPoints',
     VISIT: (visitId='') => `api/visits/${visitId}`,
     VISITS: 'api/visits/',
-    STATISTICS: 'api/touchPoints/',
+    STATISTICS: 'api/statistics/',
 };

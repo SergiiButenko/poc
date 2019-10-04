@@ -16,22 +16,34 @@ class _pocApi {
     }
 
     async getSensors(options = {}) {
-        return {
-            "touchPoints": [
-              {
-                "id": 1,
-                "title": "Coca-Cola",
-                "description": "Coca Cola Promotion",
-                "type": "INDOOR"
-              },
-              {
-                "id": 2,
-                "title": "Meet",
-                "description": "Meet promotion",
-                "type": "INDOOR"
-              }
-            ]
-           };
+        // return {
+        //     "touchPoints": [
+        //       {
+        //         "id": 1,
+        //         "title": "Coca-Cola",
+        //         "description": "Coca Cola Promotion",
+        //         "type": "INDOOR"
+        //       },
+        //       {
+        //         "id": 2,
+        //         "title": "Meet",
+        //         "description": "Meet promotion",
+        //         "type": "INDOOR"
+        //       },
+        //       {
+        //         "id": 3,
+        //         "title": "Tide",
+        //         "description": "Meet promotion",
+        //         "type": "INDOOR"
+        //       },
+        //       {
+        //         "id": 4,
+        //         "title": "Meet",
+        //         "description": "Meet promotion",
+        //         "type": "INDOOR"
+        //       }
+        //     ]
+        //    };
         return this.provider.get(
             apiUri.SENSORS,
             options,
@@ -46,20 +58,20 @@ class _pocApi {
     }
 
     async getStatistics(options = {}) {
-        return {
-            "statistics": [
-              {
-                "touchPoint": 1,
-                "averageImpressionTime": 15,
-                "impressionsCount": 24
-              },
-              {
-                "touchPoint": 2,
-                "averageImpressionTime": 24,
-                "impressionsCount": 55
-              }
-            ]
-           };
+        // return {
+        //     "statistics": [
+        //       {
+        //         "touchPoint": 1,
+        //         "averageImpressionTime": 15,
+        //         "impressionsCount": 24
+        //       },
+        //       {
+        //         "touchPoint": 2,
+        //         "averageImpressionTime": 24,
+        //         "impressionsCount": 55
+        //       }
+        //     ]
+        //    };
         return this.provider.get(
             apiUri.STATISTICS,
             options,
@@ -67,28 +79,28 @@ class _pocApi {
     }
 
     async getVisits(options = {}) {
-        return {
-            "visits": [
-              {
-                "id": 1,
-                "timestamp": {
-                  "date": "2019-10-03 22:38:38.000000",
-                  "timezone_type": 3,
-                  "timezone": "UTC"
-                },
-                "path": "2,3,4"
-              },
-              {
-                "id": 2,
-                "timestamp": {
-                  "date": "2019-10-03 22:40:48.000000",
-                  "timezone_type": 3,
-                  "timezone": "UTC"
-                },
-                "path": "4,5,6"
-              }
-            ]
-           };
+        // return {
+        //     "visits": [
+        //       {
+        //         "id": 1,
+        //         "timestamp": {
+        //           "date": "2019-10-03 22:38:38.000000",
+        //           "timezone_type": 3,
+        //           "timezone": "UTC"
+        //         },
+        //         "path": "2,3,4"
+        //       },
+        //       {
+        //         "id": 2,
+        //         "timestamp": {
+        //           "date": "2019-10-03 22:40:48.000000",
+        //           "timezone_type": 3,
+        //           "timezone": "UTC"
+        //         },
+        //         "path": "4,5,6"
+        //       }
+        //     ]
+        //    };
         return this.provider.get(
             apiUri.VISITS,
             options,

@@ -165,38 +165,6 @@ export default class ToolbarAppWeb extends Component {
                             >
                                 Dashboard
                             </Typography>
-                            <IconButton color="inherit">
-                                <Badge badgeContent={4} color="secondary">
-                                    <NotificationsIcon/>
-                                </Badge>
-                            </IconButton>
-                            <IconButton
-                                aria-owns={open ? 'menu-appbar' : undefined}
-                                aria-haspopup="true"
-                                onClick={this.handleMenu}
-                                color="inherit"
-                            >
-                                <AccountCircle />
-                            </IconButton>
-
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorEl}
-                                anchorOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                open={open}
-                                onClose={this.handleClose}
-                            >
-                                <MenuItem onClick={this.handleClose}>Мій аккаунт</MenuItem>
-                                <MenuItem onClick={this.props.logout}>Вийти</MenuItem>
-                            </Menu>
-
                         </Toolbar>
                     </AppBar>
                     <Drawer

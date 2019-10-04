@@ -71,7 +71,7 @@ export default class Sensors extends React.Component {
         }
         
         if (sensors.sensorsFetchError || statistics.statisticsFetchError ) {
-            return <LoadingFailed errorText={sensorFetchError}/>;
+            return <LoadingFailed errorText={sensors.sensorsFetchError || statistics.statisticsFetchError}/>;
         }
         
         let data = [];

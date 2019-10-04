@@ -69,6 +69,16 @@ class _pocApi {
         //         "touchPoint": 2,
         //         "averageImpressionTime": 24,
         //         "impressionsCount": 55
+        //       },
+        //       {
+        //         "touchPoint": 3,
+        //         "averageImpressionTime": 24,
+        //         "impressionsCount": 55
+        //       },
+        //       {
+        //         "touchPoint": 4,
+        //         "averageImpressionTime": 24,
+        //         "impressionsCount": 55
         //       }
         //     ]
         //    };
@@ -88,7 +98,7 @@ class _pocApi {
         //           "timezone_type": 3,
         //           "timezone": "UTC"
         //         },
-        //         "path": "2,3,4"
+        //         "path": "1,3,2"
         //       },
         //       {
         //         "id": 2,
@@ -97,7 +107,7 @@ class _pocApi {
         //           "timezone_type": 3,
         //           "timezone": "UTC"
         //         },
-        //         "path": "4,5,6"
+        //         "path": "2,3,4"
         //       }
         //     ]
         //    };

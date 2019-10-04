@@ -32,20 +32,20 @@ export default class LoadingFailed extends Component {
                         variant='h5'
                         style={{'marginTop': '5rem'}}
                     >
-                        Помилка при завантаженні.
+                        Error during loading.
                     </Typography>
 
 
                     <Typography
                         color="error"
                         variant='h6'>
-                        Повідомлення: "{errorText.message || 'Сталася помилка'}" {"\n"}
+                        Message: "{errorText.message || 'Error'}" {"\n"}
                     </Typography>
 
                     <Typography
                         color="error"
                         variant='h6'>
-                        Деталі: "{errorText.description || ''}"
+                        Details: "{errorText.description || ''}"
                     </Typography>
 
                     <Typography

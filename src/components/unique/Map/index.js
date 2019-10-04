@@ -21,8 +21,8 @@ const styles = theme => ({
     },
     map: {
         opacity: '0.5',
-        maxHeight: '100%',
-        maxWidth: '80%',
+        // maxHeight: '100%',
+        // maxWidth: '80%',
     },
     touchpoint1: {
         position: 'absolute',
@@ -36,13 +36,13 @@ const styles = theme => ({
     },
     touchpoint3: {
         position: 'absolute',
-        top: '600px',
-        left: '10px',
+        top: '500px',
+        left: '100px',
     },
     touchpoint4: {
         position: 'absolute',
-        top: '600px',
-        left: '600px',
+        top: '500px',
+        left: '500px',
     },
      
 });
@@ -60,7 +60,7 @@ export default class Map extends React.Component {
         classes: PropTypes.object.isRequired,
         sensors: PropTypes.object.isRequired,
         loading: PropTypes.bool.isRequired,
-        sensorFetchError: PropTypes.any,
+        sensorsFetchError: PropTypes.any,
         fetchSensors: PropTypes.func.isRequired,
     };
 
@@ -73,7 +73,7 @@ export default class Map extends React.Component {
         await this.props.fetchSensors(); // waiting for request
         await this.props.fetchStatistics(); // waiting for request
     
-        this.updateTimeout = setTimeout(this.fetchSensors, 500000000);
+        this.updateTimeout = setTimeout(this.fetchSensors, 5000);
     }
 
     componentWillUnmount() {
@@ -88,7 +88,7 @@ export default class Map extends React.Component {
         }
         
         if (sensors.sensorsFetchError || statistics.statisticsFetchError ) {
-            return <LoadingFailed errorText={sensorFetchError}/>;
+            return <LoadingFailed errorText={sensors.sensorsFetchError || statistics.statisticsFetchError}/>;
         }
         
         let data = {};
@@ -102,7 +102,7 @@ export default class Map extends React.Component {
         return (
             <>
             <div className={classes.container}>
-                <img src={map} width="100%" height="100%" className={classes.map}/>
+                <img src={map} width="100%" height="auto" className={classes.map}/>
                 <div className={classes.touchpoint1}>
                     <TouchPoint
                     strokeWidth="5"
@@ -117,7 +117,7 @@ export default class Map extends React.Component {
                     data={data[2]}
                     />
                 </div>
-                {/* <div className={classes.touchpoint3}>
+                <div className={classes.touchpoint3}>
                     <TouchPoint
                     strokeWidth="5"
                     sqSize="100"
@@ -130,7 +130,7 @@ export default class Map extends React.Component {
                     sqSize="100"
                     data={data[4]}
                     />
-                </div> */}
+                </div>
                 
             </div>
                 

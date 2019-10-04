@@ -1,9 +1,13 @@
 import {combineReducers} from 'redux';
 
-import devices from './devices';
+import sensors from './sensors';
+import visits from './visits';
+import statistics from './statistics';
 
 export default combineReducers({
-    devices
+    sensors,
+    visits,
+    statistics
 });
 
 

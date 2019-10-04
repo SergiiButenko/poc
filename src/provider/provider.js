@@ -15,17 +15,89 @@ class _pocApi {
         this.provider.config = config;
     }
 
-    async getDevices(options = {}) {
-        return {devices: [{id: 1}, {id: 2}, {id: 3}]};
+    async getSensors(options = {}) {
+        return {
+            "touchPoints": [
+              {
+                "id": 1,
+                "title": "coca-cole",
+                "description": "coca cola promotion",
+                "type": "INDOOR"
+              },
+              {
+                "id": 2,
+                "title": "snickers",
+                "description": "snickers promotion",
+                "type": "INDOOR"
+              }
+            ]
+           };
         return this.provider.get(
-            apiUri.DEVICES,
+            apiUri.SENSORS,
             options,
         );
     }
 
-    async getDeviceById(deviceId, options = {}) {
+    async getSensorById(sensorId, options = {}) {
         return this.provider.get(
-            apiUri.DEVICE(deviceId),
+            apiUri.SENSORS(sensorId),
+            options,
+        );
+    }
+
+    async getStatistics(options = {}) {
+        return {
+            "statistics": [
+              {
+                "touchPoint": 1,
+                "averageImpressionTime": 15,
+                "impressionsCount": 24
+              },
+              {
+                "touchPoint": 2,
+                "averageImpressionTime": 24,
+                "impressionsCount": 55
+              }
+            ]
+           };
+        return this.provider.get(
+            apiUri.STATISTICS,
+            options,
+        );
+    }
+
+    async getVisits(options = {}) {
+        return {
+            "visits": [
+              {
+                "id": 1,
+                "timestamp": {
+                  "date": "2019-10-03 22:38:38.000000",
+                  "timezone_type": 3,
+                  "timezone": "UTC"
+                },
+                "path": "2,3,4"
+              },
+              {
+                "id": 2,
+                "timestamp": {
+                  "date": "2019-10-03 22:40:48.000000",
+                  "timezone_type": 3,
+                  "timezone": "UTC"
+                },
+                "path": "4,5,6"
+              }
+            ]
+           };
+        return this.provider.get(
+            apiUri.VISITS,
+            options,
+        );
+    }
+
+    async getVisitById(visitId, options = {}) {
+        return this.provider.get(
+            apiUri.VISIT(visitId),
             options,
         );
     }

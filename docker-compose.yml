@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  frontend:
+    build:
+      context: .
+    container_name: frontend
+    ports:
+      - "8008:8008"
+    command: sh -c "yarn build && yarn start-prod"

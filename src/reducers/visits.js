@@ -3,15 +3,15 @@ import {handleActions} from 'redux-actions';
 const defaultState = {
     loading: true,
     updating: false,
-    deviceFetchError: null,
+    visitsFetchError: null,
 };
 
 export default handleActions({
-    DEVICES: {
+    VISITS: {
         FAILURE: (state, action) => {
             return {
                 ...state,
-                deviceFetchError: action.payload,
+                visitsFetchError: action.payload,
             };
         },
         LOADING: (state, action) => {

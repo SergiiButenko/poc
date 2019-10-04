@@ -7,7 +7,7 @@ export const defaultState = Map();
 
 export default handleActions({
     ENTITY: {
-        DEVICES: {
+        VISITS: {
             ...baseEntityReducers
         }
     }

@@ -1,4 +1,7 @@
 export const apiUri = {
-    DEVICE: (deviceId='') => `api/v1/device/${deviceId}`,
-    DEVICES: 'api/v1/device/'
+    SENSOR: (sensorId='') => `api/touchPoints/${sensorId}`,
+    SENSORS: 'api/touchPoints',
+    VISIT: (visitId='') => `api/visits/${visitId}`,
+    VISITS: 'api/visits/',
+    STATISTICS: 'api/touchPoints/',
 };

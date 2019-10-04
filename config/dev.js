@@ -4,8 +4,8 @@ module.exports = {
     },
 
     endpoint_section: {
-        base_url: 'http://localhost/',
+        base_url: 'http://192.168.43.8/',
         amazon: {},
-        ws_uri: 'ws://localhost/',
+        ws_uri: 'ws://172.22.43.8/',
     }
 };

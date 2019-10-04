@@ -20,14 +20,14 @@ class _pocApi {
             "touchPoints": [
               {
                 "id": 1,
-                "title": "coca-cole",
-                "description": "coca cola promotion",
+                "title": "Coca-Cola",
+                "description": "Coca Cola Promotion",
                 "type": "INDOOR"
               },
               {
                 "id": 2,
-                "title": "snickers",
-                "description": "snickers promotion",
+                "title": "Meet",
+                "description": "Meet promotion",
                 "type": "INDOOR"
               }
             ]

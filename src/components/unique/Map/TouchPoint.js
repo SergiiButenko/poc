@@ -1,7 +1,6 @@
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import {toPascalCase} from '../../../helpers/common.helper'
 
 const styles = theme => ({
     circleBackground: {
@@ -40,7 +39,7 @@ export default class TouchPoint extends React.Component {
       return (
         <>
         <Typography variant="h6" align="center">
-            {toPascalCase(data.title)}
+            {data.title}
             </Typography>
         <svg
             width={this.props.sqSize}

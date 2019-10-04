@@ -13,3 +13,5 @@ RUN mkdir -p /opt/app && cd /opt/app && ln -s /tmp/node_modules
 
 COPY . /opt/app
 RUN rm -rf /opt/app/dist
+RUN yarn build
+CMD yarn start-prod

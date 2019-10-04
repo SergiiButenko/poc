@@ -21,6 +21,8 @@ const styles = theme => ({
     },
     map: {
         opacity: '0.5',
+        maxHeight: '100%',
+        maxWidth: '80%',
     },
     touchpoint1: {
         position: 'absolute',
@@ -29,7 +31,7 @@ const styles = theme => ({
     },
     touchpoint2: {
         position: 'absolute',
-        top: '20px',
+        top: '70px',
         left: '780px',
     },
     touchpoint3: {
@@ -71,7 +73,7 @@ export default class Map extends React.Component {
         await this.props.fetchSensors(); // waiting for request
         await this.props.fetchStatistics(); // waiting for request
     
-        this.updateTimeout = setTimeout(this.fetchSensors, 5000);
+        this.updateTimeout = setTimeout(this.fetchSensors, 500000000);
     }
 
     componentWillUnmount() {
@@ -100,7 +102,7 @@ export default class Map extends React.Component {
         return (
             <>
             <div className={classes.container}>
-                <img src={map} width="auto" height="auto" className={classes.map}/>
+                <img src={map} width="100%" height="100%" className={classes.map}/>
                 <div className={classes.touchpoint1}>
                     <TouchPoint
                     strokeWidth="5"
